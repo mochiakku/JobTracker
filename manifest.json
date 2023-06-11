@@ -1,0 +1,20 @@
+{
+  "name": "Job Application Tracker",
+  "version": "0.1",
+  "description": "A simple pop-out to keep track of job applications",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Epic Mode",
+    "default_popup": "popout.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"], 
+      "js": ["popout.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
